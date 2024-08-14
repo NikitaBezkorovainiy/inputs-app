@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px dashed #d81362;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}

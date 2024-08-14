@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <app-text-input [data]="inputs?.text" (isChanged)="updateData($event, 'text')"></app-text-input>
+  <app-checkbox-input [data]="inputs?.checkbox" (isChanged)="updateData($event, 'checkbox')"></app-checkbox-input>
+  <app-radio-input [data]="inputs?.radio" (isChanged)="updateData($event, 'radio')"></app-radio-input>
+</div>
+

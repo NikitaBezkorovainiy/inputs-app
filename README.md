@@ -1,27 +1,27 @@
-# InputsApp
+# Angular 14 Project with In-Memory Web API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+This project is an Angular 14 application that uses angular-in-memory-web-api to simulate backend data operations. The application includes three input fields: a text input, a checkbox, and a radio button. When any of these inputs is changed, the application makes a request to the fake backend to update the value. Upon successful update, the input is refreshed, and a success message is displayed.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- `Text Input:` Allows users to enter and update text data.
+- `Checkbox:` Lets users toggle a boolean value.
+- `Radio Button:` Enables selection between predefined options.
+- `Fake Backend:` Implements a mock backend using angular-in-memory-web-api.
+- `Real-Time Updates:` Inputs are updated instantly upon successful backend response.
+- `Success Message:` Displays a confirmation message when data is successfully updated.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To get started with this project, follow these steps:
 
-## Build
+- Clone the repository: 
+- Install dependencies: `npm install`
+- Run the application: `ng serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The application will be available at http://localhost:4200/.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Dependencies
+- Angular 14
+- angular-in-memory-web-api

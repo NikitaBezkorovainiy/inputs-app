@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "inputs-app"
+  "cli": {
+    "analytics": "01faf48a-3a82-4402-b893-0f222d514b93"
+  }
 }
