@@ -1,11 +1,11 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import {BaseInputComponent} from "../../shared/components/base-input.component";
-import {FormControl} from "@angular/forms";
+import { BaseInputComponent } from '../../shared/components/base-input.component';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-text-input',
   templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss']
+  styleUrls: ['./text-input.component.scss'],
 })
 export class TextInputComponent extends BaseInputComponent<string> {
 

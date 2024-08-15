@@ -1,13 +1,13 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { RadioEnum } from "../../shared/enum/radio.enum";
-import {BaseInputComponent} from "../../shared/components/base-input.component";
+import { RadioEnum } from '../../shared/enum/radio.enum';
+import { BaseInputComponent } from '../../shared/components/base-input.component';
 
 
 @Component({
   selector: 'app-radio-input',
   templateUrl: './radio-input.component.html',
-  styleUrls: ['./radio-input.component.scss']
+  styleUrls: ['./radio-input.component.scss'],
 })
 export class RadioInputComponent extends BaseInputComponent<RadioEnum> {
 

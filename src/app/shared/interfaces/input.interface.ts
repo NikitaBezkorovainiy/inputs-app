@@ -1,4 +1,4 @@
-import {RadioEnum} from "../enum/radio.enum";
+import { RadioEnum } from '../enum/radio.enum';
 
 export interface InputInterface {
   text: string,

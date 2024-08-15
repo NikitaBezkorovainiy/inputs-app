@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpErrorResponse} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
-import {catchError} from 'rxjs/operators';
-import {Router} from '@angular/router';
-import {ErrorService} from "../services/error.service";
+import { Injectable } from '@angular/core';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { ErrorService } from '../services/error.service';
 
 @Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
@@ -25,13 +25,13 @@ export class HttpErrorInterceptor implements HttpInterceptor {
           case 400:
           case 403:
           case 401:
-            this.errorService.setError({errorMessage: error.statusText, errorCode: error.status});
+            this.errorService.setError({ errorMessage: error.statusText, errorCode: error.status });
             this.router.navigate(['/server-error']);
             break;
         }
 
         return throwError(() => new Error(error.message));
-      })
+      }),
     );
   }
 }

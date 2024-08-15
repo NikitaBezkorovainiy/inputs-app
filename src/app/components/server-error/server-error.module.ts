@@ -1,10 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterModule, Routes} from '@angular/router';
-import {ServerErrorComponent} from "./server-error.component";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { ServerErrorComponent } from './server-error.component';
 
 const routes: Routes = [
-  {path: '', component: ServerErrorComponent},
+  { path: '', component: ServerErrorComponent },
 ];
 
 @NgModule({
@@ -13,8 +13,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
 export class ServerErrorModule {
 }

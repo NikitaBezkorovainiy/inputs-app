@@ -1,4 +1,4 @@
 export enum RadioEnum {
-  phone = "phone",
-  email = "email"
+  phone = 'phone',
+  email = 'email',
 }

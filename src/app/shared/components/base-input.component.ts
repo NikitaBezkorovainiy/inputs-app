@@ -7,20 +7,23 @@ import {
   OnDestroy,
   OnInit,
   Output,
-  SimpleChanges
+  SimpleChanges,
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime, Subscription, timer } from 'rxjs';
 
 @Component({
-  template: ''
+  template: '',
 })
 export abstract class BaseInputComponent<T> implements OnChanges, OnInit, OnDestroy {
   public form: FormControl = new FormControl();
+
   public showIsUpdated = false;
+
   private subscriptions: Subscription = new Subscription();
 
   @Input() data?: T;
+
   @Output() isChanged: EventEmitter<T> = new EventEmitter<T>();
 
   protected constructor(protected readonly cdf: ChangeDetectorRef) {}

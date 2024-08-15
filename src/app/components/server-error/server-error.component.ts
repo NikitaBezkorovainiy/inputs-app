@@ -1,24 +1,26 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {Subscription} from "rxjs";
-import {ErrorService} from "../../shared/services/error.service";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ErrorService } from '../../shared/services/error.service';
 
 @Component({
   selector: 'app-server-error',
   templateUrl: './server-error.component.html',
-  styleUrls: ['./server-error.component.scss']
+  styleUrls: ['./server-error.component.scss'],
 })
 export class ServerErrorComponent implements OnInit, OnDestroy {
 
   public errorMessage: string = 'Some server error';
+
   public errorCode?: number;
-  private subscriptions: Subscription = new Subscription()
+
+  private subscriptions: Subscription = new Subscription();
 
   constructor(private readonly errorService: ErrorService) {
   }
 
   public ngOnInit(): void {
-    this.errorExtraction()
+    this.errorExtraction();
   }
 
   public ngOnDestroy(): void {
@@ -33,7 +35,7 @@ export class ServerErrorComponent implements OnInit, OnDestroy {
         this.errorCode = error.errorCode;
       }
     });
-    this.subscriptions.add(errorExtraction)
+    this.subscriptions.add(errorExtraction);
   }
 
 }
